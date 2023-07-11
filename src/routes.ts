@@ -1,30 +1,30 @@
-import { Router } from 'express';
-import helmet from 'helmet';
+import { Router } from 'express'
+import helmet from 'helmet'
 
-require('dotenv').config();
+require('dotenv').config()
 
-import hello from './routes/hello';
+import Greet from './routes/greet'
 
 class Routes {
-  private router: Router;
+    private router: Router
 
-  constructor() {
-    this.router = Router();
-    this.initializeMiddlewares();
-    this.initializeRoutes();
-  }
+    constructor() {
+        this.router = Router()
+        this.initializeMiddlewares()
+        this.initializeRoutes()
+    }
 
-  private initializeMiddlewares() {
-    this.router.use(helmet());
-  }
+    private initializeMiddlewares() {
+        this.router.use(helmet())
+    }
 
-  private initializeRoutes() {
-    this.router.use('/', hello);
-  }
+    private initializeRoutes() {
+        this.router.use('/', Greet)
+    }
 
-  public getRouter() {
-    return this.router;
-  }
+    public getRouter() {
+        return this.router
+    }
 }
 
-export default Routes;
+export default Routes
