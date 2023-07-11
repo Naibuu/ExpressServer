@@ -1,0 +1,9 @@
+version: 2
+updates:
+  - package-ecosystem: "pnpm" 
+    directory: "/" 
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "chalk"
+        versions: ["4.x", "5.x"]
