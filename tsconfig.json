@@ -5,7 +5,10 @@
         "target": "es6",
         "moduleResolution": "node",
         "outDir": "dist",
-        "sourceMap": true
+        "sourceMap": true,
+        "paths": {
+            "@/*": ["./src/*"]
+        }
     },
     "include": ["src"]
 }

@@ -5,7 +5,9 @@ import helmet from 'helmet'
 
 require('dotenv').config()
 
-import Routes from './routes'
+import Logger from '@/utils/Logger'
+
+import Routes from '@/Routes'
 
 class Server {
     public app: Application
@@ -46,7 +48,7 @@ class Server {
 
     public listen() {
         this.app.listen(this.port, () => {
-            console.log(`App listening on port ${this.port}`)
+            Logger.info(`Listening on port ${this.port}`)
         })
     }
 }

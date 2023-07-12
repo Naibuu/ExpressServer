@@ -10,6 +10,7 @@
 -   [Getting Started](#⚡️-getting-started)
 -   [Usage](#✨-usage)
 -   [Building for Production](#🚀-building-for-production)
+-   [Deploying to Vercel](#▲-deploying-to-vercel)
 -   [License](#license)
 
 ## ⚠️ Requirements
@@ -78,6 +79,30 @@ $ pnpm start
 $ npm start
 # or
 $ yarn start
+```
+
+## ▲ Deploying to Vercel
+
+If you want to deploy the server to <a href="https://vercel.com/">Vercel</a>, you need to create a config like this one for example:
+
+```json
+{
+    "name": "server",
+    "version": 2,
+    "public": true,
+    "builds": [
+        {
+            "src": "/src/index.ts",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/src/index.ts"
+        }
+    ]
+}
 ```
 
 ## License
