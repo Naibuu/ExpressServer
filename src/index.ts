@@ -7,7 +7,7 @@ require('dotenv').config()
 
 import Logger from '@/utils/Logger'
 
-import Routes from '@/Routes'
+import Routes from '@/routes'
 
 class Server {
     public app: Application
