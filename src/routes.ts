@@ -3,7 +3,7 @@ import helmet from 'helmet'
 
 require('dotenv').config()
 
-import Greet from '@/routes/Greet'
+import Greet from '@/routes/greet'
 
 class Routes {
     private router: Router
